@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WeightLogger_UI.MVVM.ViewModels
 {
-    public class BaseViewModel : ObservableObject
+    public abstract class BaseViewModel : ObservableObject
     {
         public string Title { get; set; }
     }

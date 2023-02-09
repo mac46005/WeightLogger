@@ -57,6 +57,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\DBManipulation_ClassLib\DBManipulation_ClassLib.csproj" />
+	  <ProjectReference Include="..\WeightLogger_ClassLib\WeightLogger_ClassLib.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="MVVM\Views\AnalysisPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

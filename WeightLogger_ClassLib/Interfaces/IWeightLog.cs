@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeightLogger_ClassLib.Interfaces
 {
-    public interface WeightLog<T> : ILog<T>
+    public interface IWeightLog<T> : ILog<T>
     {
         decimal Weight { get; set; }
         bool didWorkout { get; set; }

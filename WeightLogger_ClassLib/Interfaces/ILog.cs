@@ -9,7 +9,7 @@ namespace WeightLogger_ClassLib.Interfaces
 {
     public interface ILog<T> : IModel<T>
     {
-        string memo { get; set; }
+        string Memo { get; set; }
         DateTime DateSubmitted { get; set; }
     }
 }

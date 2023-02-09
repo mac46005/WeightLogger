@@ -3,10 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WeightLogger_UI.MVVM.Views.WeightLogsPage"
              Title="WeightLogsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <AbsoluteLayout>
+        <Border
+            
+            >
+            <Button Text="add new label"/>
+        </Border>
+        <ScrollView>
+            <ListView>
+                <ListView.Header>
+                    <Grid ColumnDefinitions="*,*,*,*,*">
+                        <Label
+                        Grid.Column="0"
+                        Text="Date"/>
+                        <Label
+                        Grid.Column="1"
+                        Text="Weight"/>
+                        <Label
+                        Grid.Column="2"
+                        Text="Workout"/>
+                        <Label
+                        Grid.Column="3"
+                        Text="Overeat"/>
+                        <Label
+                        Grid.Column="4"
+                        Text="Memo"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </AbsoluteLayout>
 </ContentPage>

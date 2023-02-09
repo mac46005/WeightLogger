@@ -27,6 +27,11 @@ namespace WeightLogger_UI.MVVM.ViewModels
         [RelayCommand]
         void GoToAddNewLog()
         {
+            ///TODO
+            ///Create add/edit page for weight log
+            ///add page to routing in appshell
+            ///test
+            ///
 
         }
     }

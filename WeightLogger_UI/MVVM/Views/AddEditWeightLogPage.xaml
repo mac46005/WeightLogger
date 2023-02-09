@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeightLogger_UI.MVVM.Views.AddEditWeightLogPage"
+             Title="AddEditWeightLogPage">
+    <HorizontalStackLayout>
+        <Label Text="ADDEDIT"/>
+        <VerticalStackLayout>
+            <Label Text="Date"/>
+            <HorizontalStackLayout>
+                <DatePicker/>
+                <TimePicker/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="Weight"/>
+            <Entry Keyboard="Numeric"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="Workout"/>
+            <Slider/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="Overeating"/>
+            <Slider/>
+        </VerticalStackLayout>
+        <Label Text="Memo"/>
+        <Editor/>
+    </HorizontalStackLayout>
+</ContentPage>

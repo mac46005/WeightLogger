@@ -3,42 +3,60 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WeightLogger_UI.MVVM.Views.WeightLogsPage"
              Title="WeightLogsPage">
-
-    <AbsoluteLayout>
-        <Border
-            
-            >
-            <Button Text="add new label"/>
-        </Border>
-        <ScrollView>
+    <!--Creating the WeightlogsPage layout-->
+    <Grid
+        BackgroundColor="Red"
+        RowDefinitions="*">
+        
+        <!--List of weight Logs-->
+        <ScrollView
+            Grid.Row="0">
             <ListView>
                 <ListView.Header>
-                    <Grid ColumnDefinitions="*,*,*,*,*">
+                    <Grid 
+                        ColumnDefinitions="*,*,*,*,2*">
                         <Label
-                        Grid.Column="0"
-                        Text="Date"/>
+                            Grid.Column="0"
+                            Text="Date"/>
                         <Label
-                        Grid.Column="1"
-                        Text="Weight"/>
+                            Grid.Column="1"
+                            Text="Weight"/>
                         <Label
-                        Grid.Column="2"
-                        Text="Workout"/>
+                            Grid.Column="2"
+                            Text="Workout"/>
                         <Label
-                        Grid.Column="3"
-                        Text="Overeat"/>
+                            Grid.Column="3"
+                            Text="OverEat"/>
                         <Label
-                        Grid.Column="4"
-                        Text="Memo"/>
+                            Grid.Column="4"
+                            Text="Memo"/>
                     </Grid>
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
-
+                        <Grid
+                            RowDefinitions="2*"
+                            ColumnDefinitions="*,*,*,*,2*">
+                            
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </ScrollView>
-    </AbsoluteLayout>
+        
+        <!--Button to add new log-->
+        <Frame
+            Grid.Row="0"
+            CornerRadius="50"
+            WidthRequest="50"
+            HeightRequest="50"
+            VerticalOptions="End"
+            HorizontalOptions="End"
+            Margin="0,0,20,20">
+            <Button
+                Text="Add log"
+                BackgroundColor="Transparent"
+                />
+        </Frame>
+    </Grid>
 </ContentPage>

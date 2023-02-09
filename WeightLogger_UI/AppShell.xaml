@@ -4,11 +4,30 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WeightLogger_UI"
+    xmlns:views="clr-namespace:WeightLogger_UI.MVVM.Views"
     Shell.FlyoutBehavior="Disabled">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <Tab
+        Title="Weight">
+            <ShellContent
+        
+        ContentTemplate="{DataTemplate views:WeightLogsPage}"/>
+        </Tab>
+        <Tab
+            Title="Diet">
+            <ShellContent ContentTemplate="{DataTemplate views:DietLogsPage}"/>
+        </Tab>
+        <Tab
+            Title="Stats">
+            <ShellContent ContentTemplate="{DataTemplate views:StatsPage}"/>
+        </Tab>
+        <Tab
+            Title="Charts">
+            <ShellContent ContentTemplate="{DataTemplate views:ChartsPage}"/>
+        </Tab>
+        <Tab
+            Title="Analysis">
+            <ShellContent ContentTemplate="{DataTemplate views:AnalysisPage}"/>
+        </Tab>
+    </TabBar>
 </Shell>

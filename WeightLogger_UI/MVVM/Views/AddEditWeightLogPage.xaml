@@ -2,29 +2,33 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WeightLogger_UI.MVVM.Views.AddEditWeightLogPage"
+             xmlns:vms="clr-namespace:WeightLogger_UI.MVVM.ViewModels"
+             x:DataType="vms:AddEditWeightLogViewModel"
              Title="AddEditWeightLogPage">
-    <HorizontalStackLayout>
+    <VerticalStackLayout>
         <Label Text="ADDEDIT"/>
-        <VerticalStackLayout>
+        <HorizontalStackLayout>
             <Label Text="Date"/>
-            <HorizontalStackLayout>
+            <VerticalStackLayout>
                 <DatePicker/>
                 <TimePicker/>
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
-        <VerticalStackLayout>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
             <Label Text="Weight"/>
             <Entry Keyboard="Numeric"/>
-        </VerticalStackLayout>
-        <VerticalStackLayout>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
             <Label Text="Workout"/>
             <Slider/>
-        </VerticalStackLayout>
-        <VerticalStackLayout>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
             <Label Text="Overeating"/>
             <Slider/>
-        </VerticalStackLayout>
+        </HorizontalStackLayout>
         <Label Text="Memo"/>
         <Editor/>
-    </HorizontalStackLayout>
+        <Button Text="Submit"
+                Command="{Binding SubmitCommand}"/>
+    </VerticalStackLayout>
 </ContentPage>

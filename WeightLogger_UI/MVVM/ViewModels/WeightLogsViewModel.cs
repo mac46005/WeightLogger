@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using DBManipulation_ClassLib.Enums;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -32,6 +33,10 @@ namespace WeightLogger_UI.MVVM.ViewModels
             ///add page to routing in appshell
             ///test
             ///
+            Shell.Current.GoToAsync("addeditweightlog", new Dictionary<string,object>()
+            {
+                {"crud_option",CRUD_Options.CREATE }
+            });
 
         }
     }

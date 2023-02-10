@@ -11,7 +11,10 @@ namespace WeightLogger_ClassLib.DbAccess
 {
     public class WeightLogsTableAccess : SQLiteAsyncTableAccess<WeightLog, int>
     {
-        ISQLiteDbConnection _connection;
+        public WeightLogsTableAccess(ISQLiteDbConnection connection)
+        {
+            _connection = connection;
+        }
         public override async Task<int> CreateAsync(WeightLog model)
         {
             var result = await _dbConnection.InsertAsync(model);

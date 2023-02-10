@@ -11,6 +11,7 @@ namespace DBManipulation_ClassLib.DbAccess.SqliteAccess
     public abstract class SQLiteAsyncTableAccess<T,U> : ICRUD_Async<T,U> where T : IModel<U>
     {
         protected SQLiteAsyncConnection _dbConnection;
+        protected ISQLiteDbConnection _connection;
         public abstract Task<int> CreateAsync(T model);
         public abstract Task<int> DeleteAsync(T model);
         public abstract Task<List<T>> ReadAllAsync();

@@ -10,4 +10,8 @@
     <ProjectReference Include="..\DBManipulation_ClassLib\DBManipulation_ClassLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DbAccess\" />
+  </ItemGroup>
+
 </Project>

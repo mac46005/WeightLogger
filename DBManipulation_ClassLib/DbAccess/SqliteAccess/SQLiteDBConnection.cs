@@ -22,3 +22,4 @@ namespace DBManipulation_ClassLib.DbAccess.SqliteAccess
 
         public string DataBasePath => Path.Combine(DatabaseFilePath, DatabaseFileName);
     }
+}

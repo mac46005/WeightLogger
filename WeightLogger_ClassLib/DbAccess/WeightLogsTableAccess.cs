@@ -18,30 +18,35 @@ namespace WeightLogger_ClassLib.DbAccess
         }
         public override async Task<int> CreateAsync(WeightLog model)
         {
+            await Open();
             var result = await _dbConnection.InsertAsync(model);
             return result;
         }
 
         public override async Task<int> DeleteAsync(WeightLog model)
         {
+            await Open();
             var result = await _dbConnection.DeleteAsync(model);
             return result;
         }
 
         public override async Task<List<WeightLog>> ReadAllAsync()
         {
+            await Open();
             var result = await _dbConnection.Table<WeightLog>().ToListAsync();
             return result;
         }
 
         public override async Task<WeightLog> ReadAsync(int id)
         {
+            await Open();
             var result = await _dbConnection.GetAsync<WeightLog>(id);
             return result;
         }
 
         public override async Task<int> UpdateAsync(WeightLog model)
         {
+            await Open();
             var result = await _dbConnection.UpdateAsync(model);
             return result;
         }

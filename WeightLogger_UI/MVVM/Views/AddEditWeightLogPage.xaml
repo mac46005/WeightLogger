@@ -16,15 +16,21 @@
         </HorizontalStackLayout>
         <HorizontalStackLayout>
             <Label Text="Weight"/>
-            <Entry Keyboard="Numeric"/>
+            <Entry Keyboard="Numeric" Text="{Binding Weight}"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout>
             <Label Text="Workout"/>
-            <Slider/>
+            <Slider Value="{Binding DidWorkOut}"
+                    WidthRequest="50"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout>
             <Label Text="Overeating"/>
-            <Slider/>
+            <Switch IsToggled="{Binding DidOvereat}"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Alcohol?"/>
+            <Slider Value="{Binding DidDrink}"
+                    WidthRequest="20"/>
         </HorizontalStackLayout>
         <Label Text="Memo"/>
         <Editor/>
